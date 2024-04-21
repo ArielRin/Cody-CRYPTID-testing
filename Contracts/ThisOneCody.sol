@@ -1,4 +1,6 @@
 
+// pulse 9inch router 0xeB45a3c4aedd0F47F345fB4c8A1802BB5740d725
+// 0xeB45a3c4aedd0F47F345fB4c8A1802BB5740d725
 
 // SPDX-License-Identifier: UNLICENSE
 
@@ -114,7 +116,7 @@ library Address {
     }
 }
 
-contract AAA25test is Context, IERC20, Ownable {
+contract UAPSEVERYWHERETEST2 is Context, IERC20, Ownable {
     using Address for address payable;
 
     mapping(address => uint256) private _rOwned;
@@ -138,10 +140,10 @@ contract AAA25test is Context, IERC20, Ownable {
     uint8 private constant _decimals = 9;
     uint256 private constant MAX = ~uint256(0);
 
-    uint256 private _tTotal = 7e9 * 10**_decimals;
+    uint256 private _tTotal = 500e9 * 10**_decimals;
     uint256 private _rTotal = (MAX - (MAX % _tTotal));
 
-    uint256 public maxTxAmount = 35000000 * 10**_decimals;
+    uint256 public maxTxAmount = 500000000000 * 10**_decimals;
 
     uint256 public swapTokensAtAmount = 7e4 * 10**9;
 
@@ -149,12 +151,12 @@ contract AAA25test is Context, IERC20, Ownable {
     uint256 private deadline = 1;
 
     address public deadWallet = 0x000000000000000000000000000000000000dEaD;
-    address public nftRewardWallet = 0x0bA23Af142055652Ba3EF1Bedbfe1f86D9bC60f7;
-    address private opsWallet = 0x3f39B8d07f4568bf2A653494a3584069d0f68227;
-    address private devWallet = 0x57103b1909fB4D295241d1D5EFD553a7629736A9;
+    address public nftRewardWallet = 0x7Cd6e55581F265bA15a673Cb9DbA88d20351560b;
+    address private opsWallet = 0x7Cd6e55581F265bA15a673Cb9DbA88d20351560b;
+    address private devWallet = 0xf71Ddb5bCF62fbdfF21EC9c1c9Dac3Fbdce8A047;
 
-    string private constant _name = "AAA25";
-    string private constant _symbol = "AAA25";
+    string private constant _name = "UAPSEVERYWHERETEST2";
+    string private constant _symbol = "UAPSEVERYWHERETEST2";
 
     struct Taxes {
         uint256 rfi;
@@ -164,8 +166,8 @@ contract AAA25test is Context, IERC20, Ownable {
         uint256 dev;
     }
 
-    Taxes public taxes = Taxes(0, 2, 0, 2, 3);
-    Taxes public sellTaxes = Taxes(0, 2, 0, 2, 33);
+    Taxes public taxes = Taxes(1, 2, 0, 1, 2);
+    Taxes public sellTaxes = Taxes(1, 2, 0, 1, 2);
     Taxes private launchtax = Taxes(0, 99, 0, 0, 0);
 
     struct TotFeesPaidStruct {
